@@ -1,0 +1,35 @@
+.d-flex{
+    display :flex;
+}
+.w-10{
+    width: 10%;
+}
+.w-30{
+    width: 30%;
+}
+
+.w-60{
+    width: 60%;
+}
+.text-ellipsis{
+    white-space: nowrap; 
+    width: 100%; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.row{
+    cursor: pointer;
+}
+.row:hover{
+    background-color: #C8C8C8;
+}
+
+.row{
+    p.upper-text{
+        text-transform: capitalize;
+    }
+
+    td{
+        padding: 0.5rem;
+    }
+}

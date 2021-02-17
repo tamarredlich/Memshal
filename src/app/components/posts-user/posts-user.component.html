@@ -1,0 +1,29 @@
+<div class="d-flex">
+    <table mat-table [dataSource]="posts" class="mat-elevation-z8">
+        <ng-container matColumnDef="title">
+            <th mat-header-cell *matHeaderCellDef> Title </th>
+            <td mat-cell *matCellDef="let element">
+                <p class="upper-text">
+                    {{element.title}}
+                </p>
+            </td>
+        </ng-container>
+        <ng-container matColumnDef="body">
+            <th mat-header-cell *matHeaderCellDef> Body </th>
+            <td mat-cell *matCellDef="let element" >
+                <p class="text-ellipsis1">{{element.body}} </p>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> Id </th>
+            <td mat-cell *matCellDef="let element" class="w-10">
+                <p>{{element.id}} </p>
+            </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" routerLink="comments-post" class="row"
+            routerLinkActive="active" [queryParams]="{commentId: row.id}"></tr>
+    </table>
+    <router-outlet></router-outlet>
+</div>ּ

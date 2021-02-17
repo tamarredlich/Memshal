@@ -1,0 +1,16 @@
+<div class="comments-block">
+    <div *ngFor="let comment of comments" class="comment-item">
+        <h4>Comment</h4>
+        <div>
+            <label>Body:</label>
+            {{comment.body}}
+        </div>
+        <div>
+            <label>Author:</label>
+            <a [href]="'mailto:'+comment.email">
+                {{comment.name}}
+            </a>
+        </div>
+
+    </div>
+</div>

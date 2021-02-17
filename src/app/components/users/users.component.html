@@ -1,0 +1,23 @@
+<div>
+    <div class="d-flex">
+        <div class="users-block">
+            <table>
+                <thead>
+                    <th>Users</th>
+                </thead>
+                <tr *ngFor="let user of users">
+                    <td>
+                        <a routerLink="posts-user" routerLinkActive="active" [queryParams]="{userId: user.id}"
+                            (click)="OnActive(user.id)" [class.active]="user.id == isActive">
+                            {{user.name}}
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div *ngIf="users?.length">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

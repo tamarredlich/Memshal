@@ -1,0 +1,25 @@
+.d-flex{
+    display: flex;
+
+    .users-block{
+        width: 20%;
+        th{
+            text-align: left;
+        }
+td{
+    padding: 1rem 0;
+    a{
+        color: #000;
+        text-decoration: none;
+    }
+    .active{
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}
+      
+    }
+}
+
+
+
